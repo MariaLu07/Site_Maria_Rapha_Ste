@@ -4,292 +4,630 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NerdZone</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f0f0;
-        }
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+}
 
-        /* Sidebar */
-        .sidebar {
-            width: 80px;
-            background-color: #e68a1e;
-            position: fixed;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 20px;
-            justify-content: space-between;
-        }
+/* Sidebar */
+.sidebar {
+    width: 80px;
+    background-color: #1a3d7c;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: space-between;
+    height: 100%;
+}
+.sidebar .user-icon {
+    margin-top: auto;
+}
 
-        .sidebar img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 20px;
-        }
+.sidebar img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
 
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            margin: 20px 0;
-            text-align: center;
-        }
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 20px 0;
+    text-align: center;
+}
 
-        .sidebar a i {
-            font-size: 20px;
-            display: block;
-            margin-bottom: 5px;
-            background-color: transparent;
-            border: 1px solid white;
-            border-radius: 50%;
-            padding: 10px;
-            transition: all 0.3s ease;
-        }
+.sidebar a i {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
 
-        .sidebar a:hover i {
-            color: #1a3d7c;
-            background-color: white;
-            border-color: #1a3d7c;
-        }
 
-        .sidebar a span {
-            font-size: 12px;
-            display: block;
-        }
+.sidebar a span {
+    font-size: 12px;
+    display: block;
+}
 
-        /* Main Content */
-        .main-content {
-            margin-left: 80px;
-            padding: 20px;
-        }
+.sidebar a:hover i {
+    color: #1a3d7c;
+    background-color: white;
+    border-color: #1a3d7c;
+}
 
-        .header {
-            text-align: center;
-            background-image: url(depositphotos_55450313-stock-photo-abstract-yellow-background.webp);
-            color: white;
-            padding: 50px 0;
-        }
 
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
 
-        .header p {
-            margin: 10px 0 0;
-            font-size: 18px;
-        }
+/* Main Content */
+.main-content {
+    margin-left: 80px;
+    padding: 0px;
+}
 
-        /* Content Area with Three Columns */
-        .content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px 0;
-        }
+.header {
+    text-align: center;
+    background: url(dourado\ filmes.jpg) no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 50px 0;
+}
 
-        .content .column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
 
-        .content .item {
-            background-color: #eba14b;
-            border-radius: 10px;
-            overflow: hidden;
-            width: 100%;
-            max-width: 300px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
+.header p {
+    margin: 10px 0 0;
+    font-size: 18px;
+}
 
-        .content .item img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
 
-        .content .item .subtitle {
-            padding: 10px;
-            background-color: #eba14b;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-        }
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #ccc;
+}
 
-        .content .item .description {
-            padding: 10px;
-            color: white;
-            font-size: 14px;
-            text-align: justify;
-        }
+.search-bar button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
 
-        .mini-quiz {
-            width: 300px;
-            height: 100px;
-            background-color: #eba14b;
-            border: 2px solid #b49adb;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-        }
+.search-bar button i {
+    font-size: 18px;
+}
+.search-bar button:hover {
+    background-color: #1c54bd;
+    border-color: #1c54bd;
+}
 
-        .quiz-content {
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-        .quiz-content img {
-            width: 40px;
-            height: 40px;
-            border-radius: 4px;
-            margin-right: 10px;
-        }
+.categories button {
+    background-color: #1a3d7c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
 
-        .quiz-content p {
-            font-size: 14px;
-            color: #5a457a;
-            font-weight: bold;
-            margin: 0;
-        }
+.auth-buttons button {
+    background-color: #1a3d7c;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
 
+.auth-buttons button:hover {
+    background-color: white;
+    color: #1a3d7c; 
+    border-color: #ffffff; 
+}
+
+
+/* Content Items */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.content .item {
+    background-color:#1a3d7c;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.);
+}
+
+.content .item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.content .item p {
+    padding: 10px;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+.content .item img, .books img, .movies img, .series img, .games img {
+    transition: transform 0.3s ease;
+}
+
+.content .item img:hover, .books img:hover, .movies img:hover, .series img:hover, .games img:hover {
+    transform: scale(1.1);
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.auth-buttons button {
+    background-color: #1a3d7c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.section {
+    padding: 20px;
+}
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.section .divider {
+    border-top: 2px dotted;
+    margin: 10px 0;
+    padding-top: 10px;
+}
+.section .content {
+    display: flex;
+    gap: 20px;
+}
+.section .content .item {
+    flex: 1;
+    text-align: center;
+}
+.section .content .item img {
+    width: 100%;
+    height: auto;
+}
+.section .content .item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.books {
+    background-color:#7A4ECD;
+    border-radius: 10px;
+    margin-left: px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.);
+}
+.books-background{
+    background-color: #bba5ca;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    padding: 20px;
+}
+.books h2 {
+    color: #4b0082;
+}
+.books .divider {
+    border-color: #4b0082;
+}
+.books .content .item {
+    background-color: #4b0082;
+    padding: 10px;
+    border-radius: 5px;
+}
+.books .content .item p {
+    color: white;
+}
+
+.livros{
+    padding-left: 80px;
+    color: #4b0082;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+.livros h3 {
+    margin-right: 10px;
+}
+.livros .divider {
+    flex-grow: 1;
+    height: 1px;
+    background: none;
+    border-top: 1px dotted #4b0082;
+}
+.size{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+.size img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.size p{
+    padding: 10px;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+
+.movies {
+    background-color:#c52424;
+    border-radius: 10px;
+    margin-left: px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.);
+}
+.movies-background{
+    background-color: #d15757;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    padding: 20px;
+}
+.movies h2 {
+    color: #c52424;
+}
+.movies .divider {
+    border-color: #c52424;
+}
+.filmes{
+    padding-left: 80px;
+    color: #c52424;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+.filmes h3{
+    margin-right: 10px;
+}
+.filmes .divider{
+    flex-grow: 1;
+    height: 1px;
+    background: none;
+    border-top: 1px dotted #c52424;
+}
+
+.series {
+    background-color:#f77b07;
+    border-radius: 10px;
+    margin-left: px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.);
+}
+.series-background{
+    background-color: #e6a161;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    padding: 20px;
+}
+.series h2 {
+    color: #f77b07;
+}
+.series .divider {
+    border-color: #f77b07;
+}
+.serie{
+    padding-left: 80px;
+    color: #f77b07;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+.serie h3 {
+    margin-right: 10px;
+}
+.serie .divider {
+    flex-grow: 1;
+    height: 1px;
+    background: none;
+    border-top: 1px dotted #f77b07;
+}
+
+.games {
+    background-color:#11ac0f;
+    border-radius: 10px;
+    margin-left: px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.);
+}
+.games-background{
+    background-color: #7ec77d;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    padding: 20px;
+}
+.games h2 {
+    color: #11ac0f;
+}
+.games .divider {
+    border-color: #11ac0f;
+}
+.jogos{
+    padding-left: 80px;
+    color: #11ac0f;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+.jogos h3 {
+    margin-right: 10px;
+}
+.jogos .divider {
+    flex-grow: 1;
+    height: 1px;
+    background: none;
+    border-top: 1px dotted #11ac0f;
+}
     </style>
 </head>
 <body>
-    <!-- Sidebar -->
+
+
     <div class="sidebar">
         <img src="1000307822-removebg-preview.png" alt="NerdZone Logo">
-        <a href="#"><i class="fas fa-book"></i><span>Livros</span></a>
-        <a href="#"><i class="fas fa-film"></i><span>Filmes</span></a>
-        <a href="#"><i class="fas fa-tv"></i><span>Séries</span></a>
-        <a href="#"><i class="fas fa-gamepad"></i><span>Jogos</span></a>
-        <a href="#" class="user-icon"><i class="fas fa-user"></i><span>Perfil</span></a>
+        <a href="#">
+            <i class="fas fa-book"></i>
+            <span>Livros</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-film"></i>
+            <span>Filmes</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-tv"></i>
+            <span>Séries</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-gamepad"></i>
+            <span>Jogos</span>
+        </a>
+        <a href="#" class="user-icon">
+            <i class="fas fa-user"></i>
+            <span>Perfil</span>
+        </a>
     </div>
+    
 
-    <!-- Main Content -->
     <div class="main-content">
-        <header class="header">
-            <h1>SÉRIES</h1>
+        <header class="header ">
+            <h1>Bem vindo ao NerdZone!</h1>
+            <p>O lugar onde você pode ser nerd sem incômodo!</p>
         </header>
 
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="categories search-bar">
+                <button>Harry Potter</button>
+                <button>Fantasia</button>
+                <button>Super-herói</button>
+                <button>Terror</button>
+                <button>Suspense</button>
+                <button>Romance</button>
+                <button>Ação</button>
+                <button>Ficção-científica</button>
+                <button>&gt;</button>
+        </div>
+            <br>
         <div class="content">
-            <!-- Column 1 -->
-            <div class="column">
-                <div class="item">
-                    <img src="game of trhones.webp" alt="Game of Thrones">
-                    <div class="subtitle">Game of Thrones teve outro spin-off cancelado pela HBO.</div>
-                </div>
-                <br>
-                <div class="item">
-                    <div class="description">
-                        <h2>TOP 10 SÉRIES DO ANO</h2>
-                        <li>1. Treta</li>
-                        <li>2. Na Mira do Júri</li>
-                        <li>3. Os Outros</li>
-                        <li>4. Last of Us</li>
-                        <li>5. Vale o Escrito</li>
-                        <li>6. Cangaço Novo</li>
-                        <li>7. Succession</li>
-                        <li>8. O Urso</li>
-                        <li>9. Reservation Dogs</li>
-                        <li>10. The Othe Two</li>
-                    </div>
-                </div>
-                <br>
-                <div class="item">
-                    <img src="agatha.jpg" alt="Agatha desde sempre">
-                    <div class="subtitle">AGTAHA enfrenta incertezas: spin-off da série é cancelado antes de entrar em produção.</div>
-                </div>
-                <br>
-                <div class="mini-quiz">
-                    <div class="quiz-content">
-                      <img src="quizzis.jpg" alt="Imagem do Quiz">
-                      <p>Quiz | Qual é o melhor plot twist dos livros?</p>
-                    </div>
-                </div>
+            <div class="item">
+                <img src="e assim que acaba.png" alt="É assim que acaba">
+                <p>'É assim que acaba': Filme ou livro?</p>
             </div>
+            <div class="item">
+                <img src="the lçast of us.png" alt="The Last of Us">
+                <p>'The Last of Us': 2ª temporada ganha trailer;</p>
+            </div>
+            <div class="item">
+                <img src="10 livros.png" alt="10 livros">
+                <p>'10 livros de romance que estão entre os mais vendidos;</p>
+            </div>
+            <div class="item">
+                <img src="moana.png" alt="Moana">
+                <p>'Moana 2 | Primeiro dia da pré-venda supera números de Divertida Mente 2;</p>
+            </div>
+            <div class="item">
+                <img src="valorant.png" alt="valorant">
+                <p>‘Valorant: Novidades no jogo surpreendem fãs.;</p>
+            </div>
+            <div class="item">
+                <img src="agatha.png" alt="agatha">
+                <p>Agatha: Série de suspense 'Desde Sempre' está chegando.;</p>
+            </div>
+            <div class="item">
+                <img src="marvel.png" alt="marvel">
+                <p>Marvel Rivals: Um novo desafio para os heróis.;</p>
+            </div>
+            <div class="item">
+                <img src="mortal kombat.png" alt="mortal kombat">
+                <p>Mortal Kombat: Os livros mais vendidos e a conexão com o game.;</p>
+            </div>
+        </div>
 
-            <!-- Column 2 -->
-            <div class="column">
-                <div class="item">
-                    <img src="houseofthedragon-personagens.jpg" alt="House of the Dragon">
-                    <div class="subtitle">House of the Dragon expande seu universo: novo spin-off sobre a Casa Velaryon é anunciado pela HBO.</div>
-                </div>
-                <br>
-                <div class="item">
-                    <img src="AAAABXv9UDtXqQmlucaK8GGqsM7rPRDlXHvfum1tHNfZYG0VswoR6uVP8t2MHXEWGkxu6t0xh8rXARCs6p_taSsWaUgZCCf74WjNFvC_F7qKaGJFFlFDIOAt6TIy_qjnydLqD-sbEw.jpg" alt="The Witcher">
-                    <div class="subtitle">The Witcher ganha novos rumos: spin-off focado em Ciri é confirmado pela Netflix.</div>
-                </div>
-                <br>
-                <div class="item">
-                    <div class="description">
-                        <h2>PESQUISAS FREQUENTES</h2>
-                        <div><a href="#">Melhor série de comédia</a></div>
-                        <div><a href="#">Séries que foram renovadas</a></div>
-                        <div><a href="#">Séries curtas para maratonar</a></div>
-                        <div><a href="#">Melhores adptações de livros</a></div>
-                    </div>
-                </div>
-                <br>
-                <div class="item">
-                    <img src="Série Dinastia_2017.png" alt="Dinastia">
-                    <div class="subtitle">"Dynasty" promete drama e luxo: novos episódios revelam segredos ainda mais explosivos entre os Carringtons.</div>
-                </div>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="column">
-                <div class="item">
-                    <img src="BLACK-MIRROR-CAPA-1024x576.webp" alt="Black Mirror">
-                    <div class="subtitle">Black Mirror retorna com episódios interativos: nova temporada explora os limites da tecnologia e escolhas humanas.</div>
-                </div>
-                <br>
-                <div class="mini-quiz">
-                    <div class="quiz-content">
-                      <img src="quizzis.jpg" alt="Imagem do Quiz">
-                      <p>Quiz | Vamos testar seus conhecimentos sobre a saga de livros "As crónicas de gelo e fogo"?</p>
-                    </div>
-                </div>
-                <br>
-                <div class="item">
-                    <img src="the-chosen-temporada-1-netflix.jpg" alt="The Chosen">
-                    <div class="subtitle">The Chosen conquista fãs ao redor do mundo: nova temporada promete aprofundar as histórias dos apóstolos.</div>
-                </div>
-            </div>
+        <div class="auth-buttons">
+            <button>ENTRAR</button>
+            <button>CADASTRAR-SE</button>
         </div>
     </div>
 
-    <footer style="background-color: #e68a1e; color: white; padding: 10px 0; text-align: center;">
-        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
-            <!-- Logo -->
-            <div style="flex: 0 1 auto;">
-                <img src="1000307822-removebg-preview.png" alt="NerdZone Logo" style="width: 50px; height: 50px;">
+<div class="main-content content">
+    <div class="books-background"> 
+            <div class="livros">
+                </br>
+                <h3>LIVROS</h3>
+                <div class="divider"></div>
             </div>
-            <!-- Redes Sociais -->
-            <div style="flex: 1; text-align: right;">
-                <p>Redes Sociais:</p>
-                <p>
-                    <a href="https://instagram.com" style="color: white; text-decoration: none; margin: 0 10px;">Instagram</a>
-                    <a href="https://facebook.com" style="color: white; text-decoration: none; margin: 0 10px;">Facebook</a>
-                    <a href="https://twitter.com" style="color: white; text-decoration: none; margin: 0 10px;">X</a>
-                    <a href="https://telegram.com" style="color: white; text-decoration: none; margin: 0 10px;">Telegram</a>
-                </p>
+            <div class="content size">
+                <div class="books">
+                    <img alt="83df6765-e681-4862-8973-bc04a8f54b30.jpg" height="200" src="83df6765-e681-4862-8973-bc04a8f54b30.jpg" width="300"/>
+                    <p>'É assim que acaba': Filme ou livro?</p>
+                </div>
+                <div class="books">
+                    <img alt="Book cover of 'The Last of Us' with a forest background" height="200" src="download (10) (2).jpg" width="300"/>
+                    <p>'The Last of Us': 2ª temporada ganha trailer;</p>
+                </div>
+                <div class="books">
+                    <img alt="Book cover of a romance novel with a cup of coffee" height="200" src="download (11) (1) (1).jpg" width="300"/>
+                    <p>10 livros de romance que estão entre os mais vendidos</p>
+                </div>
+                <div class="books">
+                    <img alt="Book cover of 'Guardiã de Histórias' with a key" height="200" src="image (7).png" width="300"/>
+                    <p>Moana 2 | Primeiro dia da pré-venda supera números de Divertida Mente 2</p>
+                </div>
+            </div>
+            </br>
+            </br>
+        </div>
+    </div>
+</div>    
+        
+<div class="main-content content">
+    <div class="movies-background">
+        <div class="filmes">
+            </br>
+            <h3>FILMES</h3>
+            <div class="divider"></div>
+        </div>
+        <div class="content size">
+            <div class="movies">
+                <img alt="Movie poster of 'É assim que acaba' with a blue background" height="200" src="https://storage.googleapis.com/a1aa/image/G2Q8uLQoE55jKt6ruiNWxjmSVbynarsvZlDPpWUYhm8c9j8E.jpg" width="300"/>
+                <p>'É assim que acaba': Filme ou livro?</p>
+            </div>
+            <div class="movies">
+                <img alt="Movie poster of 'The Last of Us' with the main characters" height="200" src="https://storage.googleapis.com/a1aa/image/XXGADgSpY078IxCGzMbe57y4eOowGu5U6vX8Sz6hxqc41PyTA.jpg" width="300"/>
+                <p>'The Last of Us': 2ª temporada ganha trailer;</p>
+            </div>
+            <div class="movies">
+                <img alt="Movie poster of a romance movie with colorful background" height="200" src="https://storage.googleapis.com/a1aa/image/SqAmKn9E1II6BRiH3xOkID8eBj6eTnS8C1cfXAYGJe2lXfReE.jpg" width="300"/>
+                <p>10 livros de romance que estão entre os mais vendidos</p>
+            </div>
+            <div class="movies">
+                <img alt="Movie poster of 'Moana 2' with Moana and Maui" height="200" src="https://storage.googleapis.com/a1aa/image/4XcKxXmjMS7lAV41S8imiOnBcPGaVg9aDs2COHeEfpS71PyTA.jpg" width="300"/>
+                <p>Moana 2 | Primeiro dia da pré-venda supera números de Divertida Mente 2</p>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 10px;">
-            <p>Sobre | Contato | Colaboradores | Fundação</p>
-        </div>
-    </footer>
+    </div>
+</div>
 
+<div class="main-content content">
+    <div class="series-background">
+        <div class="serie">
+            </br>
+            <h3>SÉRIES</h3>
+            <div class="divider"></div>
+        </div>
+        <div class="content size">
+            <div class="series">
+                <img alt="Movie poster of 'É assim que acaba' with a blue background" height="200" src="https://storage.googleapis.com/a1aa/image/G2Q8uLQoE55jKt6ruiNWxjmSVbynarsvZlDPpWUYhm8c9j8E.jpg" width="300"/>
+                <p>'É assim que acaba': Filme ou livro?</p>
+            </div>
+            <div class="series">
+                <img alt="Movie poster of 'The Last of Us' with the main characters" height="200" src="https://storage.googleapis.com/a1aa/image/XXGADgSpY078IxCGzMbe57y4eOowGu5U6vX8Sz6hxqc41PyTA.jpg" width="300"/>
+                <p>'The Last of Us': 2ª temporada ganha trailer;</p>
+            </div>
+            <div class="series">
+                <img alt="Movie poster of a romance movie with colorful background" height="200" src="https://storage.googleapis.com/a1aa/image/SqAmKn9E1II6BRiH3xOkID8eBj6eTnS8C1cfXAYGJe2lXfReE.jpg" width="300"/>
+                <p>10 livros de romance que estão entre os mais vendidos</p>
+            </div>
+            <div class="series">
+                <img alt="Movie poster of 'Moana 2' with Moana and Maui" height="200" src="https://storage.googleapis.com/a1aa/image/4XcKxXmjMS7lAV41S8imiOnBcPGaVg9aDs2COHeEfpS71PyTA.jpg" width="300"/>
+                <p>Moana 2 | Primeiro dia da pré-venda supera números de Divertida Mente 2</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="main-content content">
+    <div class="games-background">
+        <div class="jogos">
+            </br>
+            <h3>JOGOS</h3>
+            <div class="divider"></div>
+        </div>
+        <div class="content size">
+            <div class="games">
+                <img alt="Movie poster of 'É assim que acaba' with a blue background" height="200" src="https://storage.googleapis.com/a1aa/image/G2Q8uLQoE55jKt6ruiNWxjmSVbynarsvZlDPpWUYhm8c9j8E.jpg" width="300"/>
+                <p>'É assim que acaba': Filme ou livro?</p>
+            </div>
+            <div class="games">
+                <img alt="Movie poster of 'The Last of Us' with the main characters" height="200" src="https://storage.googleapis.com/a1aa/image/XXGADgSpY078IxCGzMbe57y4eOowGu5U6vX8Sz6hxqc41PyTA.jpg" width="300"/>
+                <p>'The Last of Us': 2ª temporada ganha trailer;</p>
+            </div>
+            <div class="games">
+                <img alt="Movie poster of a romance movie with colorful background" height="200" src="https://storage.googleapis.com/a1aa/image/SqAmKn9E1II6BRiH3xOkID8eBj6eTnS8C1cfXAYGJe2lXfReE.jpg" width="300"/>
+                <p>10 livros de romance que estão entre os mais vendidos</p>
+            </div>
+            <div class="games">
+                <img alt="Movie poster of 'Moana 2' with Moana and Maui" height="200" src="https://storage.googleapis.com/a1aa/image/4XcKxXmjMS7lAV41S8imiOnBcPGaVg9aDs2COHeEfpS71PyTA.jpg" width="300"/>
+                <p>Moana 2 | Primeiro dia da pré-venda supera números de Divertida Mente 2</p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
