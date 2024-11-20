@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NerdZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 80px;
+            background-color: #e68a1e;
+            position: fixed;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            justify-content: space-between;
+        }
+
+        .sidebar img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .sidebar a i {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 5px;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 50%;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover i {
+            color: #1a3d7c;
+            background-color: white;
+            border-color: #1a3d7c;
+        }
+
+        .sidebar a span {
+            font-size: 12px;
+            display: block;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 80px;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background-image: url(depositphotos_55450313-stock-photo-abstract-yellow-background.webp);
+            color: white;
+            padding: 50px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .header p {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
+
+        /* Content Area with Three Columns */
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .content .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content .item {
+            background-color: #eba14b;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .content .item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .content .item .subtitle {
+            padding: 10px;
+            background-color: #eba14b;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .content .item .description {
+            padding: 10px;
+            color: white;
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        .mini-quiz {
+            width: 300px;
+            height: 100px;
+            background-color: #eba14b;
+            border: 2px solid #b49adb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        .quiz-content {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .quiz-content img {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .quiz-content p {
+            font-size: 14px;
+            color: #5a457a;
+            font-weight: bold;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img src="1000307822-removebg-preview.png" alt="NerdZone Logo">
+        <a href="#"><i class="fas fa-book"></i><span>Livros</span></a>
+        <a href="#"><i class="fas fa-film"></i><span>Filmes</span></a>
+        <a href="#"><i class="fas fa-tv"></i><span>Séries</span></a>
+        <a href="#"><i class="fas fa-gamepad"></i><span>Jogos</span></a>
+        <a href="#" class="user-icon"><i class="fas fa-user"></i><span>Perfil</span></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="header">
+            <h1>SÉRIES</h1>
+        </header>
+
+        <div class="content">
+            <!-- Column 1 -->
+            <div class="column">
+                <div class="item">
+                    <img src="game of trhones.webp" alt="Game of Thrones">
+                    <div class="subtitle">Game of Thrones teve outro spin-off cancelado pela HBO.</div>
+                </div>
+                <br>
+                <div class="item">
+                    <div class="description">
+                        <h2>TOP 10 SÉRIES DO ANO</h2>
+                        <li>1. Treta</li>
+                        <li>2. Na Mira do Júri</li>
+                        <li>3. Os Outros</li>
+                        <li>4. Last of Us</li>
+                        <li>5. Vale o Escrito</li>
+                        <li>6. Cangaço Novo</li>
+                        <li>7. Succession</li>
+                        <li>8. O Urso</li>
+                        <li>9. Reservation Dogs</li>
+                        <li>10. The Othe Two</li>
+                    </div>
+                </div>
+                <br>
+                <div class="item">
+                    <img src="agatha.jpg" alt="Agatha desde sempre">
+                    <div class="subtitle">AGTAHA enfrenta incertezas: spin-off da série é cancelado antes de entrar em produção.</div>
+                </div>
+                <br>
+                <div class="mini-quiz">
+                    <div class="quiz-content">
+                      <img src="quizzis.jpg" alt="Imagem do Quiz">
+                      <p>Quiz | Qual é o melhor plot twist dos livros?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="column">
+                <div class="item">
+                    <img src="houseofthedragon-personagens.jpg" alt="House of the Dragon">
+                    <div class="subtitle">House of the Dragon expande seu universo: novo spin-off sobre a Casa Velaryon é anunciado pela HBO.</div>
+                </div>
+                <br>
+                <div class="item">
+                    <img src="AAAABXv9UDtXqQmlucaK8GGqsM7rPRDlXHvfum1tHNfZYG0VswoR6uVP8t2MHXEWGkxu6t0xh8rXARCs6p_taSsWaUgZCCf74WjNFvC_F7qKaGJFFlFDIOAt6TIy_qjnydLqD-sbEw.jpg" alt="The Witcher">
+                    <div class="subtitle">The Witcher ganha novos rumos: spin-off focado em Ciri é confirmado pela Netflix.</div>
+                </div>
+                <br>
+                <div class="item">
+                    <div class="description">
+                        <h2>PESQUISAS FREQUENTES</h2>
+                        <div><a href="#">Melhor série de comédia</a></div>
+                        <div><a href="#">Séries que foram renovadas</a></div>
+                        <div><a href="#">Séries curtas para maratonar</a></div>
+                        <div><a href="#">Melhores adptações de livros</a></div>
+                    </div>
+                </div>
+                <br>
+                <div class="item">
+                    <img src="Série Dinastia_2017.png" alt="Dinastia">
+                    <div class="subtitle">"Dynasty" promete drama e luxo: novos episódios revelam segredos ainda mais explosivos entre os Carringtons.</div>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="column">
+                <div class="item">
+                    <img src="BLACK-MIRROR-CAPA-1024x576.webp" alt="Black Mirror">
+                    <div class="subtitle">Black Mirror retorna com episódios interativos: nova temporada explora os limites da tecnologia e escolhas humanas.</div>
+                </div>
+                <br>
+                <div class="mini-quiz">
+                    <div class="quiz-content">
+                      <img src="quizzis.jpg" alt="Imagem do Quiz">
+                      <p>Quiz | Vamos testar seus conhecimentos sobre a saga de livros "As crónicas de gelo e fogo"?</p>
+                    </div>
+                </div>
+                <br>
+                <div class="item">
+                    <img src="the-chosen-temporada-1-netflix.jpg" alt="The Chosen">
+                    <div class="subtitle">The Chosen conquista fãs ao redor do mundo: nova temporada promete aprofundar as histórias dos apóstolos.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #e68a1e; color: white; padding: 10px 0; text-align: center;">
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Logo -->
+            <div style="flex: 0 1 auto;">
+                <img src="1000307822-removebg-preview.png" alt="NerdZone Logo" style="width: 50px; height: 50px;">
+            </div>
+            <!-- Redes Sociais -->
+            <div style="flex: 1; text-align: right;">
+                <p>Redes Sociais:</p>
+                <p>
+                    <a href="https://instagram.com" style="color: white; text-decoration: none; margin: 0 10px;">Instagram</a>
+                    <a href="https://facebook.com" style="color: white; text-decoration: none; margin: 0 10px;">Facebook</a>
+                    <a href="https://twitter.com" style="color: white; text-decoration: none; margin: 0 10px;">X</a>
+                    <a href="https://telegram.com" style="color: white; text-decoration: none; margin: 0 10px;">Telegram</a>
+                </p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">
+            <p>Sobre | Contato | Colaboradores | Fundação</p>
+        </div>
+    </footer>
+
+</body>
+</html>
