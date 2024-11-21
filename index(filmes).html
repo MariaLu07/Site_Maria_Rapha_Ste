@@ -173,7 +173,7 @@ body {
     gap: 20px;
     align-items: flex-start;
     position: absolute;
-    margin-left: 80px;
+    margin-left: 30px;
     margin-right: 30px;
 }
 
@@ -205,35 +205,89 @@ body {
     transform: scale(1.1);
 }
 
+.mini-quiz {
+    width: 300px;
+    height: 100px;
+    background-color: #c52424;
+    border: 2px solid #a81b1b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.quiz-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.quiz-content img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.quiz-content p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.p0{
+    position: absolute;
+    left: 25px;
+}
 .p1{
     position: absolute;
     top: 290px;
-    left: 35px;
+    left: 25px;
 }
 
 .p2{
     position: absolute;
     top: 600px;
-    left: 35px;
+    left: 25px;
+
 }
 
 .p3{
     position: absolute;
     top: 530px;
-    left: 406px;
+    left: 420px;
 }
 
 .p4{
     position: absolute;
     top: 305px;
-    left: 775px
+    left: 815px
 }
 
 .p5{
     position: absolute;
-    top: px;
-    left: 406px;
+    top: 620px;
+    left: 815px;
 }
+
+.q1{
+    position: absolute;
+    top: 900px;
+    left: 840px;
+}
+
+.p6{
+    position: absolute;
+    left: 420px;
+}
+
+.p7{
+    position: absolute;
+    left: 815px;
+}
+
 
     </style>
 </head>
@@ -279,7 +333,7 @@ body {
 
             <br>
         <div class="perguntas">
-            <div class="item">
+            <div class="item p0">
                 <p><b><i>> Pesquisas frequentes:</i></b></p>
                 <p>• Melhor filme do ano</p>
                 <p>• Filmes de super-herói</p>
@@ -287,11 +341,11 @@ body {
                 <p>• filmes com plot twist</p>
                 <p>• Data de lançamento de Moana 2</p>
             </div>
-            <div class="item">
+            <div class="item p6">
                 <img src="image (8).png" alt="image (8).png">
                 <p>'The Last of Us': 2ª temporada ganha trailer;</p>
             </div>
-            <div class="item">
+            <div class="item p7">
                 <img src="10 livros.png" alt="10 livros">
                 <p>'10 livros de romance que estão entre os mais vendidos;</p>
             </div>
@@ -318,6 +372,12 @@ body {
             <div class="item p5">
                 <img src="mortal kombat.png" alt="mortal kombat">
                 <p>Mortal Kombat: Os livros mais vendidos e a conexão com o game.;</p>
+            </div>
+            <div class="mini-quiz q1">
+                <div class="quiz-content">
+                  <img src="quizzis.jpg" alt="Imagem do Quiz">
+                  <p><b>Quiz | </b>Vamos testar seus conhecimentos sobre a saga de livros "As crónicas de gelo e fogo"?</p>
+                </div>
             </div>
         </div>
 
