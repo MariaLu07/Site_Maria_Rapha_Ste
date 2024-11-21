@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NerdZone - Livros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: black;
+        }
+
+        .sidebar {
+            width: 80px;
+            background-color: #5a0a8b;
+            position: fixed;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            justify-content: space-between;
+        }
+
+        .sidebar img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .sidebar a i {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 5px;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 50%;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover i {
+            color: #3b065e;
+            background-color: white;
+            border-color: #3b065e;
+        }
+
+        .main-content {
+            margin-left: 80px;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #6f248b;
+            padding: 30px 0;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .vertical-box {
+            width: 100%;
+            max-width: 250px; /* Aumentando a largura */
+            height: 350px; /* Aumentando a altura */
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .vertical-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .horizontal-box {
+            width: 100%;
+            max-width: 350px; /* Aumentando a largura */
+            height: 250px; /* Aumentando a altura */
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .horizontal-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info {
+            width: 350px;
+            background-color: #9a4bb2;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .author-info img {
+            width: 90px;
+            height: 90px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .mini-quiz {
+            width: 350px;
+            height: 150px;
+            background-color: #9a4bb2;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mini-quiz p {
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Ajustando para as imagens deitadas com a descrição */
+        .horizontal-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="1000307822-removebg-preview.png" alt="NerdZone Logo">
+        <a href="#"><i class="fas fa-book"></i><span>Livros</span></a>
+        <a href="#"><i class="fas fa-film"></i><span>Filmes</span></a>
+        <a href="#"><i class="fas fa-gamepad"></i><span>Jogos</span></a>
+        <a href="#" class="user-icon"><i class="fas fa-user"></i><span>Perfil</span></a>
+    </div>
+
+    <div class="main-content">
+        <header class="header">
+            <h1>LIVROS</h1>
+        </header>
+
+        <div class="content">
+            <!-- Primeira coluna -->
+            <div class="column">
+                <div class="vertical-box">
+                    <img src="CH_TIME_GALA.webp" alt="Livro 1">
+                </div>
+                <div class="author-info">
+                    <img src="719bddb5-c834-4db4-afd0-672d03c198d7.jpg" alt="Autora 1">
+                    <p>Saiba mais sobre "os setes maridos de evelyn hugo"</p>
+                </div>
+                <div class="vertical-box">
+                    <img src="443ad53eede78b5b26c11f3eaa20cc23.jpg" alt="Livro 4">
+                </div>
+                <div class="author-info">
+                    <img src="7e7e845b-9ee4-41ee-b961-813c4453b7f3.jpg" alt="Autora 4">
+                    <p>Saiba mais sobre o livro "Guardiã de histórias"</p>
+                </div>
+            </div>
+
+            <!-- Segunda coluna -->
+            <div class="column">
+                <div class="horizontal-box">
+                    <img src="Ordem-dos-livros-de-Os-Herois-do-Olimpo.jpg" alt="Livros">
+                </div>
+                <div class="author-info">
+                    <img src="967059d2-3448-46ed-86d1-a410e3722be4.jpg" alt="Autora 2">
+                    <p>Clique aqui para saber mais sobre este livro fabuloso!</p>
+                </div>
+                <div class="mini-quiz">
+                    <p>Quiz sobre Livros!</p>
+                </div>
+                <div class="horizontal-box">
+                    <img src="livros-game-of-thrones.webp" alt="Livros">
+                </div>
+            </div>
+
+            <!-- Terceira coluna -->
+            <div class="column">
+                <div class="vertical-box">
+                    <img src="4d647e23672d1c95192ed76fd6b52e8e.jpg" alt="Livro 2">
+                </div>
+                <div class="author-info">
+                    <img src="6e9406dc-7ca7-434f-932c-9702362f6a81.jpg" alt="Autora 3">
+                    <p>Confira este livro incrivel!</p>
+                </div>
+                <div class="vertical-box">
+                    <img src="159835be5f620947bb9146a316accd8c.jpg" alt="Livro 5">
+                </div>
+                <div class="author-info">
+                    <img src="casa.jpg" alt="Autora 5">
+                    <p>Conferir novidades!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
