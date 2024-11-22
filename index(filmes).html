@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NerdZone</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -194,7 +194,7 @@ body {
 .perguntas .item p {
     padding: 10px;
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
     color: white;
 }
 .perguntas .item img, .books img, .movies img, .series img, .games img {
@@ -237,6 +237,24 @@ body {
     margin: 0;
 }
 
+.q1{
+    position: absolute;
+    top: 540px;
+    left: 440px;
+}
+
+.q2{
+    position: absolute;
+    top: 1190px;
+    left: 47px;
+}
+
+.q3{
+    position:absolute;
+    top: 1320px;
+    left: 47px;
+}
+
 .p0{
     position: absolute;
     left: 25px;
@@ -256,8 +274,8 @@ body {
 
 .p3{
     position: absolute;
-    top: 530px;
-    left: 420px;
+    top: 925px;
+    left: 815px;
 }
 
 .p4{
@@ -268,14 +286,8 @@ body {
 
 .p5{
     position: absolute;
-    top: 620px;
+    top: 600px;
     left: 815px;
-}
-
-.q1{
-    position: absolute;
-    top: 900px;
-    left: 840px;
 }
 
 .p6{
@@ -287,6 +299,124 @@ body {
     position: absolute;
     left: 815px;
 }
+
+.p8{
+    position: absolute;
+    top: 900px;
+    left: 25px;
+}
+
+.p9{
+    position: absolute;
+    top: 690px;
+    left:420px;
+}
+
+.p10{
+    position: absolute;
+    top: 1230px;
+    left: 420px;
+}
+
+.p11{
+    position: absolute;
+    top: 1240px;
+    left: 815px;
+}
+
+
+.footer {
+    background-color: #a81b1b;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    top: 1600px;
+    margin-left: 80px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-info, .footer-social {
+    flex: 1;
+    min-width: 300px;
+}
+
+.margin{
+    margin-left: 50px;
+}
+.footer-info h3, .footer-social h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icon {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f0f0f0;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin: 10px auto 0;
+    }
+}
+
+.frequent-search {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.frequent-search:hover {
+    text-decoration: underline;
+    color: #c58787;
+}
+
 
 
     </style>
@@ -321,8 +451,7 @@ body {
 
     <div class="main-content">
         <header class="header ">
-            <h1>Bem vindo ao NerdZone!</h1>
-            <p>O lugar onde você pode ser nerd sem incômodo!</p>
+            <h1>FILMES</h1>
         </header>
 
         
@@ -335,52 +464,144 @@ body {
         <div class="perguntas">
             <div class="item p0">
                 <p><b><i>> Pesquisas frequentes:</i></b></p>
-                <p>• Melhor filme do ano</p>
-                <p>• Filmes de super-herói</p>
-                <p>• Quais são os próximos filmes que vão lançar ano que vem?</p>
-                <p>• filmes com plot twist</p>
-                <p>• Data de lançamento de Moana 2</p>
+                <a href="#" class="frequent-search">• Melhor filme do ano</a><br>
+            </br>
+                <a href="#" class="frequent-search">• Filmes de super-herói</a><br>
+            </br>
+                <a href="#" class="frequent-search">• Quais são os próximos filmes que vão lançar ano que vem?</a><br>
+            </br>
+                <a href="#" class="frequent-search">• Filmes com plot twist</a><br>
+            </br>
+                <a href="#" class="frequent-search">• Data de lançamento de Moana 2</a><br>
+            </br>
             </div>
+            
+
             <div class="item p6">
-                <img src="image (8).png" alt="image (8).png">
-                <p>'The Last of Us': 2ª temporada ganha trailer;</p>
+                <img src="pixelcut-export (1).jpeg" alt="transformers">
+                <p>Transformers: O Último Cavaleiro - Mark Wahlberg e Anthony Hopkins no centro de uma guerra épica</p>
             </div>
+
             <div class="item p7">
-                <img src="10 livros.png" alt="10 livros">
-                <p>'10 livros de romance que estão entre os mais vendidos;</p>
+                <img src="download (3).jpeg" alt="cinema nacional">
+                <p>Os filmes mais vistos do cinema nacional desde 1970;</p>
             </div>
+
             <div class="item p1">
-                <img src="moana.png" alt="Moana">
+                <img src="download (2).jpeg" alt="Moana">
                 <p>'Moana 2 | Primeiro dia da pré-venda supera números de Divertida Mente 2;</p>
             </div>
+
+            <br>
             <div class="item p2">
-                <img src="valorant.png" alt="valorant">
-                <p>‘Valorant: Novidades no jogo surpreendem fãs.;</p>
+                <p><b><i>> Top 5 Filmes Considerados Entre os Piores da História:</i></b></p>
+                <a href="#" class="frequent-search">• Troll 2 (1990)</a><br>
+            </br>
+                <a href="#" class="frequent-search">• Plan 9 from Outer Space (1959)</a><br>
+            </br>
+                <a href="#" class="frequent-search">• The Room (2003)</a><br>
+            </br>
+                <a href="#" class="frequent-search">• Catwoman (2004)</a><br>
+            </br>
+                <a href="#" class="frequent-search">• Glitter (2001)</a><br>
+            </br>
+
             </div>
+
             <div class="item p3">
-                <img src="agatha.png" alt="agatha">
-                <p>Agatha: Série de suspense 'Desde Sempre' está chegando.;</p>
+                <img src="frozen_2_capa_cFLm8sC.jpg" alt="Frozen 2">
+                <p>A Disney está com tudo! Veja os lançamentos para os próximos anos.</p>
             </div>
+
+            <br>
+
             <div class="item p4">
-                <p><b><i>> Pesquisas frequentes:</i></b></p>
-                <p>• Melhor filme do ano</p>
-                <p>• Filmes de super-herói</p>
-                <p>• Quais são os próximos filmes que vão lançar ano que vem?</p>
-                <p>• filmes com plot twist</p>
-                <p>• Data de lançamento de Moana 2</p>
+                <p><b><i>> Top 5 filmes de ação/aventura:</i></b></p>
+                <a href="#" class="frequent-search"> • 1. Indiana Jones e os Caçadores da Arca Perdida (1981):</a><br>
+            </br>
+                <a href="#" class="frequent-search"> • Mad Max: Estrada da Fúria (2015)</a><br>
+            </br>
+                <a href="#" class="frequent-search"> • O Senhor dos Anéis: A Sociedade do Anel (2001)</a><br>
+            </br>
+                <a href="#" class="frequent-search"> • Vingadores: Ultimato (2019)</a><br>
+            </br>
+                <a href="#" class="frequent-search"> • John Wick (2014)</a><br>
+            </br>
             </div>
+
             <div class="item p5">
-                <img src="mortal kombat.png" alt="mortal kombat">
-                <p>Mortal Kombat: Os livros mais vendidos e a conexão com o game.;</p>
+                <img src="pantera-negra_capa_widelg.jpg" alt="Marvel">
+                <p>Os únicos filmes da Marvel que ganharam um Oscar.</p>
             </div>
+
             <div class="mini-quiz q1">
                 <div class="quiz-content">
-                  <img src="quizzis.jpg" alt="Imagem do Quiz">
-                  <p><b>Quiz | </b>Vamos testar seus conhecimentos sobre a saga de livros "As crónicas de gelo e fogo"?</p>
+                  <img src="download (12).jpg" alt="Imagem do Quiz">
+                  <p><b>Quiz | </b>Quantos filmes da década passada você conhece? Faça o test para descobrir!</p>
+                </div>
+
+            </div>
+            <div class="item p8">
+                <img src="download (8).jpeg" alt="Estrelas Além do Tempo">
+                <p>Dia da Consciência Negra: 8 filmes com histórias inspiradoras</p>
+            </div>
+
+            <div class="item p9">
+                <img src="alienromulus.jpeg" alt="image (8).png">
+                <p>Onde assistir 'Alien: Romulus'? Filme chega ao streaming nesta quinta</p>
+            </div>
+
+            <div class="mini-quiz q2">
+                <div class="quiz-content">
+                  <img src="images.jpg" alt="Imagem do Quiz">
+                  <p><b>Quiz | </b>Você se considera uma pessoas cinéfila? Venha descobrir quantos clássicos do cinema você adivinha por uma cena</p>
                 </div>
             </div>
-        </div>
 
+            <div class="mini-quiz q3">
+                <div class="quiz-content">
+                    <img src="download (7).jpeg" alt="Imagem do Quiz">
+                    <p><b>Quiz | </b> Qual a ordem dos filmes do MCU? Venha provar se você é realmente um(a) fã da MARVEL;</p>
+                </div>
+            </div>
+
+            <div class="item p10">
+                <img src="Divertida-Mente-2-entra-top-10-de-bilheterias-da-historia.jpg" alt="Divertidamente 2">
+                <p>'Divertida Mente 2' supera 'O Rei Leão' e se torna maior bilheteria da animação</p>
+            </div>
+
+            <div class="item p11">
+                <img src="download (9).jpeg" alt="Moana">
+                <p>Sony confirma "Jumanji 3" com retorno do elenco principal</p>
+            </div>
+        </div>
     </div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>Sobre</h3>
+            <p>O NerdZone é uma plataforma para entusiastas de cultura nerd, com conteúdo de filmes, livros, séries e mais.</p>
+            <h3>Contato</h3>
+            <p>Email: contato@nerdzone.com.br</p>
+            <h3>Colaboradores</h3>
+            <p>Equipe NerdZone</p>
+            <h3>Fundação</h3>
+            <p>Desde 2024</p>
+        </div>
+        <div class="footer-social margin">
+            <h3>Siga-nos</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i> X</a>
+                <a href="#" class="social-icon"><i class="fab fa-telegram"></i> Telegram</a>
+            </div>
+            <div class="footer-logo">
+                <img src="1000307822-removebg-preview.png" alt="NerdZone Logo">
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
